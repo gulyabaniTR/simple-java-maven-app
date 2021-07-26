@@ -42,7 +42,7 @@ echo HURRRRAAAY  # This is a comment, too!'''
 
     stage('çükübik') {
       steps {
-        sh 'maven build'
+        sleep 1
       }
     }
 
