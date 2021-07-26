@@ -26,26 +26,38 @@ echo Hello World        # This is a comment, too!'''
       }
     }
 
-    stage('xxxxxxxxxxxxx') {
+    stage('error') {
+      steps {
+        error 'asd'
+      }
+    }
+
+    stage('delay') {
       parallel {
-        stage('xxxxxxxxxxxxx') {
+        stage('delay') {
           steps {
-            build(job: 'maven build', wait: true, quietPeriod: 2)
+            sleep 1
           }
         }
 
         stage('') {
           steps {
-            error 'asd'
+            error 'HATAAAAA'
           }
         }
 
       }
     }
 
-    stage('') {
+    stage('çükübik') {
       steps {
-        sleep 1
+        sh 'maven build'
+      }
+    }
+
+    stage('wolololo') {
+      steps {
+        echo 'HURRRRRRRRRRA'
       }
     }
 
