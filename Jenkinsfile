@@ -35,19 +35,8 @@ echo HURRRRAAAY  # This is a comment, too!'''
     }
 
     stage('delay') {
-      parallel {
-        stage('delay') {
-          steps {
-            sleep 1
-          }
-        }
-
-        stage('error') {
-          steps {
-            error 'HATAAAAA'
-          }
-        }
-
+      steps {
+        sleep 1
       }
     }
 
