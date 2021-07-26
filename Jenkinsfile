@@ -28,7 +28,9 @@ echo Hello World        # This is a comment, too!'''
 
     stage('error') {
       steps {
-        error 'asd'
+        sh '''#!/bin/sh
+# This is a comment!
+echo HURRRRAAAY  # This is a comment, too!'''
       }
     }
 
@@ -40,7 +42,7 @@ echo Hello World        # This is a comment, too!'''
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             error 'HATAAAAA'
           }
@@ -49,7 +51,7 @@ echo Hello World        # This is a comment, too!'''
       }
     }
 
-    stage('çükübik') {
+    stage('Ã§Ã¼kÃ¼bik') {
       steps {
         sh 'maven build'
       }
